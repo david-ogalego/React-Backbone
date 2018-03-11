@@ -5,3 +5,8 @@
     npm start
 ```
 
+Using react router to render different backbone views
+
+    /
+    /view1
+    /view2
