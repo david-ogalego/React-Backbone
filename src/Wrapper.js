@@ -11,8 +11,19 @@ export default class Wrapper extends Component {
     }
     
     componentDidMount() {
+        this.renderBackboneView();  
+    }
+
+    componentDidUpdate() {
+        // We need to rerender the view when clicking in new Link
+        // Because when we click only calling the render method
+        this.renderBackboneView();
+    }
+
+    renderBackboneView() {
         new BackboneView({
-            el: this.container
-        }).render();    
+            el: this.container,
+            idView: this.props.idView
+        }).render();
     }
 }
